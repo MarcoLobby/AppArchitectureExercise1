@@ -1,12 +1,11 @@
 package com.project1.apparchitectureexercise1
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.view.View
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.project1.apparchitectureexercise1.databinding.ActivityMainBinding
 import com.squareup.picasso.Picasso
 
@@ -22,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        viewModel.getDogImageNetworkCall(binding.imageDog)
+        viewModel.getDogImageNetworkCall()
 
         viewModel.dogImage.observe(this) { dogImage ->
             when (dogImage) {
